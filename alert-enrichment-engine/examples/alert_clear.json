@@ -1,0 +1,10 @@
+{
+  "source": "Solarwinds",
+  "severity": "CRIT",
+  "device": "nyc-sw-02",
+  "metric": "availability",
+  "value": 0,
+  "timestamp": "2025-11-25T19:05:00Z",
+  "state": "clear",
+  "message": "nyc-sw-02 is back online"
+}
