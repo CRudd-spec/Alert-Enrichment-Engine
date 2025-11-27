@@ -16,7 +16,7 @@ It implements a minimal but real **alert → incident decision engine**.
 ### 2. Normalize
 - Maps vendor severity values to a standard internal severity
 - Classifies alerts into problem categories (e.g. reachability, performance)
-- Derives operational impact from severity
+- Determines operational impact from severity
 
 ### 3. Deduplicate
 - Generates a deterministic deduplication key based on incident identity  
@@ -34,8 +34,8 @@ It implements a minimal but real **alert → incident decision engine**.
 
 ---
 
-## Deduplication model (important)
-Deduplication in v0 is **identity-based**, not time-based.
+## Deduplication model
+Deduplication is **identity-based**, not time-based.
 
 - Repeated alerts for the same active incident are suppressed
 - The same dedup key is reused across executions
@@ -44,12 +44,12 @@ Deduplication in v0 is **identity-based**, not time-based.
 ### Known limitation
 If a resource goes down, recovers, and later fails again, the dedup key will match the previous incident.
 
-In a production system, this would be addressed by one or more of the following:
+In a production system, this could also be addressed as:
 - Scoping deduplication to **active incidents only**
 - Applying a **time window** to deduplication
 - Incorporating incident state transitions into key reuse logic
 
-This limitation is intentional in v0 to keep the engine focused on identity correlation and lifecycle mechanics.
+This limitation is intentional in v0 to keep the engine focused on identity correlation and lifecycle.
 
 ---
 
