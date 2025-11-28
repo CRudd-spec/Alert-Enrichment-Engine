@@ -2,7 +2,7 @@
 
 ## What this does
 This script ingests raw monitoring alerts (JSON), normalizes vendor-specific fields, and produces a standardized **incident candidate** suitable for automation such as ticket creation, and routing.
-It implements a minimal but real **alert → incident decision engine**.
+It implements a minimal but real **alert -> incident decision engine**.
 
 ---
 
@@ -63,8 +63,3 @@ This project demonstrates:
 It is intentionally minimal and designed to be extended to an ITSM API or event pipeline.
 
 ---
-
-## Status
-- Version: v0
-- Scope: single-file, local execution
-- Next steps: ITSM integration or dedup refinement
