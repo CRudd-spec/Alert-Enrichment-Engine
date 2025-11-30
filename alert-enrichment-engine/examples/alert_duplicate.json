@@ -1,10 +1,11 @@
 {
-  "source": "Solarwinds",
+  "source": "Monitoring-Platform",
   "severity": "CRIT",
-  "device": "nyc-sw-02",
+  "device": "example-device",
   "metric": "availability",
   "value": 300,
   "timestamp": "2025-11-25T19:02:00Z",
   "state": "active",
-  "message": "nyc-sw-02 still unavailable"
+  "message": "device still unavailable"
 }
+
